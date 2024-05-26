@@ -1,0 +1,120 @@
+Q1> Explain what are API end Point.
+
+Ans-> API endpoint act as the entry point to any service , like you have a website as www.instagram.com/signin , so here the 
+/signin is the API end point . 
+
+
+
+Q2> Can you explain the difference between SQL and NoSQL databases?
+
+Ans-> SQL databases rely some set of schema , to create a data entry to the SQL database we need to follow that schema.
+ex-> PostgresSQL 
+whereas NoSQL databases don't follow any schema for the entry of the data to the databases ex-> MongoDB
+
+
+
+Q3> What is a RESTful API, and what are its core principles?
+
+Ans-> A RESTful API is the way for differnet computer program to communicate to each other throughout the internet , 
+these are like the set of rules using which the user can fetch the data fromm the database or the user can make change to 
+the database (GET,POST,DELETE,POST)
+
+Here are the core principles of RESTful APIs,
+
+i> Statelessness -> Each request from the client to the server must contains all the information which the server require to 
+send back the response. The server don't remember any previous request from the client
+
+ii> Client-Server Architecture -> The client try to access the data from the server whereas the server is located at some 
+differnt place and they communicate through some uniform interface.This separation allows each to evolve independently.
+
+iii> Uniform Interface -> The RESTful API use a standard way to interact with the resource. using HTTP methods
+
+GET: Retrieve a resource (like reading data).
+POST: Create a new resource.
+PUT: Update an existing resource.
+DELETE: Remove a resource.
+
+iv> Stateless Communication -> everytime the user or client need to send all the information at the request time because the 
+server don't remember the past requests so for the proper response of data user need to provide all the information.
+
+v> Cacheability: Responses from the server can be cacheable or non-cacheable . Resources should be cacheable either by client
+or by server side because it reduces the request-response time.
+
+Q4> Can you describe a typical HTTP request/response cycle?
+
+Ans -> Imagine you are using a web browser to check the weather on a weather website.
+
+Steps in the HTTP Request/Response Cycle:
+Client Makes a Request:
+
+Action: You type the URL of the weather website (e.g., https://weather.com/today) into your web browser and press Enter.
+HTTP Request: Your browser creates an HTTP request. This request is like a message asking the weather website's server for the latest weather information.
+Request Details:
+
+Method: The request uses the GET method because you want to get information.
+URL: The request is sent to https://weather.com/today.
+Headers: The request includes some headers, which are additional details like your browser type (e.g., Chrome, Firefox) and acceptable response formats (e.g., HTML, JSON).
+Server Receives the Request:
+
+Server Action: The weather website's server receives your request. It understands that you want the weather information for today.
+Server Processes the Request:
+
+Database Access: The server might look up the latest weather data from its database.
+Data Processing: The server processes this data to prepare a response. This could involve formatting the data into a readable web page.
+Server Sends a Response:
+
+HTTP Response: The server creates an HTTP response. This response is like a message back to your browser with the information you requested.
+Status Code: The response includes a status code (e.g., 200 OK) indicating that the request was successful.
+Headers: The response has headers with additional information, such as the type of content being sent (e.g., HTML, JSON).
+Body: The response body contains the actual weather data, usually formatted as an HTML page.
+Client Receives the Response:
+
+Browser Action: Your browser receives the response from the server.
+Rendering: The browser reads the HTML content in the response and displays it on your screen as a web page. You now see the latest weather information.
+Summary:
+You request: Typing URL and pressing Enter (browser sends GET request).
+Server processes: The weather website's server gets the request and prepares the weather data.
+Server responds: The server sends back the weather data in an HTTP response.
+You see the result: Your browser displays the weather information on the webpage.
+
+
+Q5> How would you handle file uploads in a web application?
+
+Ans-> we need to keep the following points in mind while handling the file uploads in a web application
+
+1> Size of the file ->  we should validate the size of entered by the user
+
+2> Use Secure Channel-> we should use secure channel like HTTP
+
+3> Avoid Name collision -> The names of the files entered by the user should be differnet otherwise it can create a error
+while the accessing of the data by the user.
+
+4> Keep metadata about your files -> you should keep the track of the files entered by the user while keeping the data 
+to the database so that we can provide the extra information to the user.
+
+extra information like 
+ 
+i> original name of the file
+ii> stored file name
+iii> size of the file
+iv> Date of entry of the file
+
+Q6> Describe how session management works in web applications
+
+Ans -> ----------------------- Easy to write -----------------------------
+
+
+Q7> How do you approach API versioning in your projects?
+
+Ans->  API versioning is the process of making changes to our API over time . it insure that after making changes to the API 
+won't make any change to the existing client application.
+
+Common method of API versioning are as follows
+
+1> Version in the URL -> Example: https://api.example.com/v1/users 
+
+
+Q8> How do you protect a server from SQL injection attacks?
+
+Ans-> preparing statement using parameterized queries -> this is one of the best way to protect the server from this attacks
+for this we use some frameworks or library which create a 
